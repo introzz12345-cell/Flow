@@ -11,7 +11,7 @@
  */
 (function () {
   var STORAGE_KEY = "flow-theme";
-  var THEME_COLORS = { light: "#ffffff", dark: "#181b22" };
+  var THEME_COLORS = { light: "#ffffff", dark: "#0d0f13" };
   var root = document.documentElement;
   var media = window.matchMedia("(prefers-color-scheme: dark)");
 
