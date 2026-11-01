@@ -1,0 +1,51 @@
+/*
+ * Flow theme tokens
+ * - Default: follows the device setting (prefers-color-scheme)
+ * - Manual override: <html data-theme="light|dark"> (set by js/theme.js)
+ */
+
+:root {
+  color-scheme: light;
+
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --surface-2: #eef0f6;
+  --border: #dfe3ec;
+  --text: #161a23;
+  --text-muted: #5b6475;
+  --primary: #3b5bdb;
+  --primary-contrast: #ffffff;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 4px 12px rgba(16, 24, 40, 0.06);
+}
+
+/* Dark tokens — used when the device is dark and the user hasn't forced light */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --bg: #0f1115;
+    --surface: #181b22;
+    --surface-2: #222631;
+    --border: #2c3140;
+    --text: #e8eaf0;
+    --text-muted: #9aa3b5;
+    --primary: #7c94ff;
+    --primary-contrast: #0f1115;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* Dark tokens — forced by the user */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0f1115;
+  --surface: #181b22;
+  --surface-2: #222631;
+  --border: #2c3140;
+  --text: #e8eaf0;
+  --text-muted: #9aa3b5;
+  --primary: #7c94ff;
+  --primary-contrast: #0f1115;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.35);
+}
