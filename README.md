@@ -19,6 +19,10 @@ Mobile-first web app with light / dark mode.
 
 To add new UI, use the variables in `css/theme.css` (e.g. `var(--surface)`, `var(--text)`) instead of hard-coded colours, and it will work in both themes automatically.
 
+## EA (MetaTrader 5)
+
+The `ea/` folder holds **FlowPullbackEA**, a trend-pullback Expert Advisor for MT5 (XAUUSD on a cent account). See [`ea/README.md`](ea/README.md) for the rules, installation, and backtest guide (Thai).
+
 ## Run
 
 Open `index.html` in a browser, or serve the folder:
